@@ -1,5 +1,6 @@
-test#!/usr/bin/python3
-"""This is a module container of the function 6-base_geometry.py
+#!/usr/bin/python3
+"""
+Contains the class BaseGeometry
 """
 
 
