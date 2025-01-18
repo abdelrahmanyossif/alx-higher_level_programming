@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Takes in a URL, sends a request to the URL
-and displays the value of the variable X-Request-Id
-in the response header"""
+"""Displays the X-Request-Id header variable of a request to a given URL.
+Usage: ./5-hbtn_header.py <URL>
+"""
+import sys
+import requests
 
-if __name__ == '__main__':
-    import sys
-    import requests
-    try:
-        response = requests.get(sys.argv[1])
-        print(response.headers.get('X-Request-Id'))
-    except Exception:
-        pass
+
+if __name__ == "__main__":
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    print(r.headers.get("X-Request-Id"))
